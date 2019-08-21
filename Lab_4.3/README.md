@@ -32,7 +32,7 @@ A good location for these general comments and TODO lists would be right after t
 
 ### Script start version
 
-Content of “door_hinges_start.py”:
+Content of "door_hinges_start.py":
 
 ```python
 import clr
@@ -106,7 +106,7 @@ for door in doors:
 ![revit_python_shell_05.png](https://github.com/hdm-dt-fb/bilt_academy_2019/raw/master/Lab_4.3/img/revit_python_shell_05.png "Error when trying to access door type parameter.")
 
 Luckily the first line of the exception already gives a hint:
-“’NoneType’ object has no attribute ‘AsString()’”
+"'NoneType' object has no attribute 'AsString()'"
 This basically means we cannot use .AsString() to get a parameter text value, if that object does not exist. 
 But since we print each door Id before any other action, we know, that the last door Id we see is the Id of the door 
 that gives us the error.
@@ -116,10 +116,9 @@ door type looks like:
 After selecting the door with its Id (Revit > Manage > Inquiry > Select by Id) we can see that the door is a 
 double leaf door. This is probably also the reason the creator did not provide with a default hinges side. 
 With this information we have to take a decision now:
-    • Expect the parameter to always be there 
-and have our script fail when users load incompatible families
-    • Expect the parameter to not always be there
-and only process conforming doors
+* Expect the parameter to always be there and have our script fail when users load incompatible families
+* Expect the parameter to not always be there and only process conforming doors
+
 For this workshop we will accept, that there might be doors that do not comply. 
 So we will check with a simple conditional if the parameter exists:
 
@@ -156,7 +155,7 @@ for door in doors:
 ### Get instance property door mirrored
 
 Whenever we get the default hinges side information, we want to know if the door is mirrored, in order to tell if the 
-door is a “lefty” or “righty”:
+door is a "lefty" or "righty":
 
 ```python
 for door in doors:
@@ -217,13 +216,13 @@ for door in doors:
 
 So far we did not change the model at all. But after checking the output of our script is correct, we would want to 
 write the result to a parameter. This works very similarly to reading a parameter value, but we specify, that we want 
-to set the value via: Set(“parameter_value”). 
+to set the value via: Set("parameter_value").
 Whenever we want to modify data of our Revit model we need to put it inside the context of a database transaction. 
 Our modifications to the model have to happen between the start and the commit of the transaction.
 Find the final version of our script below:
 
 Script final version
-Content of “door_hinges_complete.py”:
+Content of "door_hinges_complete.py":
 
 ```python
 """
@@ -309,7 +308,7 @@ Now that we have a fully functional script that we can paste into RevitPythonShe
 functionality with our colleagues. At HdM we use pyRevit for that purpose. We can basically store our script with the 
 right name in the right directory and get a native Revit button in return! 
 For this workshop the named script and directories are already prepared:
-You can drop the provided “BILT.extension” directory into the extensions directory of pyRevit. 
+You can drop the provided "BILT.extension" directory into the extensions directory of pyRevit. 
 After a Revit restart or just a pyRevit reload you should see the new button created in your Revit ribbon bar. 
 To create more custom pyRevit scripts just follow the logic of the directory structure and refer to the excellent 
 pyRevit documentation.
@@ -324,14 +323,18 @@ without any reloads or refreshes!
 ### Potential extensions of the script
 
 Host wall information
-As you might imagine we barely scratched the surface of what is possible. Dependent on your project’s needs, our script has the potential to be extended with quite some useful extra functionality. If you have a look at the properties of our door in RevitLookup you will find the interesting “Host” property, which gives us access to the wall the door is hosted by. This could be the starting point for functionality that
-    • queries for the wall material and 
+As you might imagine we barely scratched the surface of what is possible. Dependent on your project’s needs, our script 
+has the potential to be extended with quite some useful extra functionality. 
+If you have a look at the properties of our door in RevitLookup you will find the interesting “Host” property, 
+which gives us access to the wall the door is hosted by. This could be the starting point for functionality that
+* queries for the wall material and 
 writes it into a door parameter, 
 or just checks for compatibility 
-    • aligns the workset of the door to the workset of the wall 
+* aligns the workset of the door to the workset of the wall 
 or sets them to a predefined one
-    • check fire ratings of the doors align with the wall rating
-    • check sound insulation ratings of the doors align with the wall rating
+* check fire ratings of the doors align with the wall rating
+* check sound insulation ratings of the doors align with the wall rating
+
 and many more.
 
 
