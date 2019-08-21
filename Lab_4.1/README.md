@@ -1,6 +1,6 @@
-#Python basics
+# Python basics
 
-###Hello world
+### Hello world
 As any newcomer to a programming language or programming in general, we start with a common first little task: 
 To write a little program called hello world, which does nothing else but showing/printing a “hello world!” text to the screen. 
 For some people this even serves as a benchmark of how easy it is to learn the language. 
@@ -26,7 +26,7 @@ You will stumble over all the important little unavoidable mistakes and at the s
 your code.  For the BILT Academy lab we have to resort to pasting in interest of time.
 
 
-###Variables
+### Variables
 In almost every program we would want to store information. We can do this by using variables. 
 You can think of them as container with a label on it. The name of the variable is the text on the label. 
 A variable can hold all kinds of data. To assign a value to a variable, or in our picture creating a container labelling 
@@ -48,7 +48,7 @@ print(empty_variable)
 print(some_text, list_of_numbers)
 ```
 
-###Loops
+### Loops
 Whenever we store multiple things in one variable (called iterable) – like the multiple characters of “Python” 
 text (called string) in variable some_text or all the numbers stored in our list_of_numbers – we can process the 
 individual elements one by one.
@@ -71,7 +71,7 @@ from the list is put into the variable number, so the current number and its inc
 element in list_of_numbers.  Once we end the indentation, we are out of the loop, so the “loop finished” message gets 
 printed only once.
 
-###Conditionals
+### Conditionals
 As we process data, we often want our code to take predefined decisions. These are called conditionals and offer a very simple yet flexible way to process some elements differently than others. The most simple and common conditional is the keyword “if”. 
 It will – as the word already suggests – only run a block of indented code if its condition is met:
 
