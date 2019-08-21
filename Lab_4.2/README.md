@@ -92,6 +92,7 @@ There is a great tool for that: [RevitLookup](https://github.com/jeremytammik/Re
 Please jump to the Tools & resources section to learn more about it
 
 ### Read element type parameters
+
 Once we are able to read Instance parameters, we will certainly want to get access to the type parameters, too. 
 There is a just a minor thing to be aware of:
 In the RevitAPI the type of a Family is accessed by the property “Symbol”. From there the parameter value access is the 
