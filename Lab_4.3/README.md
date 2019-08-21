@@ -366,11 +366,11 @@ After a successful install there should be the directory:
 
 Now we would just need to copy over the following two things from the installing user with the admin privileges to the 
 regular user, who will use the shell in Revit: 
-    • First copy the directory from:
+* First copy the directory from:
 `C:\Users\your_admin_username\AppData\Roaming\RevitPythonShell201X`
 to:
 `C:\Users\your_username\AppData\Roaming\RevitPythonShell201X`
-    • Then copy the actual addin file from:
+* Then copy the actual addin file from:
 `C:\Users\f.beaupere\AppData\Roaming\Autodesk\Revit\Addins\201X\RevitPythonShell201X.addin`
 to:
 `C:\Users\your_username\AppData\Roaming\Autodesk\Revit\Addins\201X\RevitPythonShell201X.addin`
