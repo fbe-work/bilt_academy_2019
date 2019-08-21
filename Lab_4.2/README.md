@@ -11,7 +11,7 @@ the first selected element under “s0”.
 This enables a path for quick exploration. As a preview for later, you could type “s0.” and get an autocomplete helper, 
 which shows you an impressive amount of built-in functionality already available for the object:
 
-![revit_python_shell_02.png](https://github.com/hdm-dt-fb/bilt_academy_2019/raw/master/Lab_4.1/img/revit_python_shell_02.png "Connect to model elements in RevitPythonShell.")
+![revit_python_shell_02.png](https://github.com/hdm-dt-fb/bilt_academy_2019/raw/master/Lab_4.2/img/revit_python_shell_02.png "Connect to model elements in RevitPythonShell.")
 
 Usually we would not want to force the users of our scripts to select the elements to be processed, if we can avoid it. 
 For that scenario there is a so-called FilteredElementCollector available which gives access to model elements by their 
@@ -75,7 +75,7 @@ To retrieve the parameter value we need one more method call, which is dependent
 stored. As we will access the door mark, which is stored as text/string the method we need to get the parameter value is 
 “AsString()”:
 
-![revit_python_shell_03.png](https://github.com/hdm-dt-fb/bilt_academy_2019/raw/master/Lab_4.1/img/revit_python_shell_03.png "Connect to model elements in RevitPythonShell.")
+![revit_python_shell_03.png](https://github.com/hdm-dt-fb/bilt_academy_2019/raw/master/Lab_4.2/img/revit_python_shell_03.png "Connect to model elements in RevitPythonShell.")
 
 Our doors loop extended with the door mark:
 
@@ -98,7 +98,7 @@ There is a just a minor thing to be aware of:
 In the RevitAPI the type of a Family is accessed by the property “Symbol”. From there the parameter value access is the 
 same way as for the instances via  “LookupParameter(“type_parameter_name”)”:
 
-![revit_python_shell_04.png](https://github.com/hdm-dt-fb/bilt_academy_2019/raw/master/Lab_4.1/img/revit_python_shell_04.png "Access door type parameter.")
+![revit_python_shell_04.png](https://github.com/hdm-dt-fb/bilt_academy_2019/raw/master/Lab_4.2/img/revit_python_shell_04.png "Access door type parameter.")
 
 In our loop this would look like this:
 
