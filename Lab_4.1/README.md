@@ -1,6 +1,7 @@
 # Python basics
 
 ### Hello world
+
 As any newcomer to a programming language or programming in general, we start with a common first little task: 
 To write a little program called hello world, which does nothing else but showing/printing a “hello world!” text to the screen. 
 For some people this even serves as a benchmark of how easy it is to learn the language. 
@@ -27,6 +28,7 @@ your code.  For the BILT Academy lab we have to resort to pasting in interest of
 
 
 ### Variables
+
 In almost every program we would want to store information. We can do this by using variables. 
 You can think of them as container with a label on it. The name of the variable is the text on the label. 
 A variable can hold all kinds of data. To assign a value to a variable, or in our picture creating a container labelling 
@@ -49,6 +51,7 @@ print(some_text, list_of_numbers)
 ```
 
 ### Loops
+
 Whenever we store multiple things in one variable (called iterable) – like the multiple characters of “Python” 
 text (called string) in variable some_text or all the numbers stored in our list_of_numbers – we can process the 
 individual elements one by one.
