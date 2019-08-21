@@ -348,12 +348,16 @@ pre-compiled version here:
 and follow the instruction provided in the zip file. 
 Once the Add-In is loaded in Revit, you could either get a listing of everything (takes quite some time on large models) 
 or inspect a selected element or current view. Everything in bold font works like a link in a website.
-Notepad++
+
+### Notepad++
+
 A good text/code editor can make quite the difference. For small scripts or to start coding I usually recommend Notepad++, 
 as it is an open source editor, that comes with tons of good tools built in, nice Python Syntax highlighting, and is 
 also available as portable version which does not require an Installation. A few recommended settings:
+
 Tab settings (Settings > Preferences > Tab Settings: TabSize:4, Check Replace by space)
 Syntax highlighting (Language > P > Python)
+
 For larger I prefer pyCharm as IDE which give nice auto completion when IronPython stubs are loaded.
 
 ### RevitPythonShell
@@ -362,6 +366,7 @@ RevitPythonShell provides installers under their repository release section. Unf
 there seem to be no option to install it for all users. So if you are able to install it, but do not see it getting 
 loaded under Add-Ins tab is the workaround that worked on our machines:
 After a successful install there should be the directory:
+
 `C:\Program Files (x86)\RevitPythonShell2018`
 
 Now we would just need to copy over the following two things from the installing user with the admin privileges to the 
