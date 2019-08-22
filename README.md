@@ -18,4 +18,4 @@ complete markdown compilation:
 
 The sample model is found in the assets or via this link:
 
-[python beginners tower sample model](https://github.com/hdm-dt-fb/bilt_academy_2019/download/1.0.0/python_beginners_tower.rvt)
+[python beginners tower sample model](model/python_beginners_tower.rvt)
